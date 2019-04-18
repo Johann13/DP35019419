@@ -2,7 +2,6 @@ package ha01;
 
 import ha01.caterer.Caterer;
 
-//TODO add AsiaShop
 public class DeliveryService {
 
 	private Caterer subContractor;

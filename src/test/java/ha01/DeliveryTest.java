@@ -1,5 +1,6 @@
 package ha01;
 
+import ha01.caterer.AsiaShop;
 import ha01.caterer.BurgerShop;
 import ha01.caterer.DoenerShop;
 import ha01.caterer.PizzaShop;
@@ -20,7 +21,9 @@ public class DeliveryTest {
 		deliveryService.setSubContractor(new DoenerShop());
 		deliveryService.deliver("M4", "My third Address");
 
-		//TODO add AsiaShop test
+		//test newly added AsiaShop
+		deliveryService.setSubContractor(new AsiaShop());
+		deliveryService.deliver("M4", "My new Address");
 
 	}
 
