@@ -1,5 +1,5 @@
 # DP35019419
-Design Pattern Homework from Johann Feser - 35019419
+Design Pattern Homework by Johann Feser - 35019419
 
 - HA01 Stratagey Pattern
 - HA02
