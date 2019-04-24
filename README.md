@@ -2,7 +2,7 @@
 Design Pattern Homework by Johann Feser - 35019419
 
 - HA01 Stratagey Pattern
-- HA02
+- HA02 Visitor Pattern
 - HA03
 - HA04
 - HA05
