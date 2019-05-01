@@ -1,0 +1,11 @@
+ldc 1
+ldc 1
+print
+add
+print
+square
+print
+square
+print
+square
+print

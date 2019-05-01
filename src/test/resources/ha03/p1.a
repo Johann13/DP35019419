@@ -1,0 +1,6 @@
+Ldc 6
+ldc 7
+mult
+store x
+ld x
+print
