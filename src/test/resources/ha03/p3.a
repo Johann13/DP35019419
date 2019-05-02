@@ -1,0 +1,11 @@
+ldc 3
+ldc 13
+mult
+ldc 10
+add
+ldc 2
+mult
+ldc 2
+add
+print
+store x

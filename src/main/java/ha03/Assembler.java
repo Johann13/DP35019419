@@ -21,10 +21,6 @@ public class Assembler {
 		store = new HashMap<>();
 	}
 
-	public Assembler(URL url) {
-		this(new File(url.getFile()).getPath());
-	}
-
 	public Assembler(String path) {
 		this();
 		try {
@@ -32,6 +28,10 @@ public class Assembler {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+	}
+
+	public Assembler(URL url) {
+		this(new File(url.getFile()).getPath());
 	}
 
 	public void addCommand(Command... commands) {

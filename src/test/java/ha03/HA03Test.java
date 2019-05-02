@@ -31,4 +31,16 @@ public class HA03Test {
 		Assert.assertEquals(256, i);
 
 	}
+
+	@Test
+	public void p3() {
+		Assembler assembler = new Assembler(getClass().getResource("p3.a"));
+
+		assembler.addCommand(new LD(), new LDC(), new Mult(), new Print(), new Store(), new Add(), new Square());
+		assembler.printLines();
+		assembler.printCommands();
+		assembler.handle();
+		int x = assembler.getStore().get("x");
+		Assert.assertEquals(100, x);
+	}
 }
