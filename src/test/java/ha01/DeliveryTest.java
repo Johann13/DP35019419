@@ -6,6 +6,9 @@ import ha01.caterer.DoenerShop;
 import ha01.caterer.PizzaShop;
 import org.junit.Test;
 
+// HA01: 09/10
+// -2 kein gitignore
+// -1 Kein Junit Test es fehlen assertions naechtes mal mehr Punkte abzug
 public class DeliveryTest {
 
 	@Test
