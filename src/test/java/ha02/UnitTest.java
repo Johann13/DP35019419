@@ -9,6 +9,8 @@ import ha02.visitor.TaskCounterVisitor;
 import org.junit.Assert;
 import org.junit.Test;
 
+// HA02: 08/10
+// -2 Pattern falsch implementiert
 public class UnitTest {
 
 	@Test

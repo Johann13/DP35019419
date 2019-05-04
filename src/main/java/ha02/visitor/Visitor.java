@@ -20,7 +20,8 @@ public class Visitor {
 		return visitChildren(0, feature.getChildren());
 	}
 
-
+	// hier könntest du es einfach machen. es ist trotzdem nicht was vom pattern erwartet ist
+	// wenn du 100 klassen wie wirst du machen?
 	int visitChildren(int init, List<Unit> children) {
 		int sum = init;
 		if (children != null) {
