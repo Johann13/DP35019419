@@ -1,10 +1,10 @@
 # DP35019419
 Design Pattern Homework by Johann Feser - 35019419
 
-- HA01 Strategy Pattern
-- HA02 Visitor Pattern
-- HA03 Chain of Responsibility
-- HA04
+- HA01 Strategy Pattern         7/10
+- HA02 Visitor Pattern          8/10
+- HA03 Chain of Responsibility   /10
+- HA04 Listener Pattern          /10
 - HA05
 - HA06
 - HA07
