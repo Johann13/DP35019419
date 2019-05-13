@@ -3,7 +3,10 @@ package ha03;
 import ha03.commands.*;
 import org.junit.Assert;
 import org.junit.Test;
-
+// HA03: 08/10
+// -2 java.lang.NullPointerException
+//	at ha03.Assembler.<init>(Assembler.java:34)
+//	at ha03.HA03Test.p1(HA03Test.java:11)
 public class HA03Test {
 
 	@Test

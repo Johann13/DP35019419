@@ -13,6 +13,7 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
+// HA04: 10/10
 public class ha04Test {
 
 	@Test
