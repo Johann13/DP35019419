@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
+<VBox alignment="center" minHeight="100" minWidth="100" prefHeight="300" prefWidth="300" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ha06.Controller">
+    <Canvas fx:id="canvas" height="200.0" width="300.0" />
+
+    <HBox>
+        <TextField fx:id="textField" onAction="#onEnter" />
+        <Button text="Draw" fx:id="button"
+        onAction="#onEnter"/>
+
+    </HBox>
+
+    <HBox>
+        <ListView prefHeight="200.0" prefWidth="200.0"
+                  fx:id="listView"/>
+        <ListView prefHeight="200.0" prefWidth="200.0"
+                  fx:id="listView2"/>
+
+    </HBox>
+</VBox>
