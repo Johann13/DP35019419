@@ -11,7 +11,7 @@ import org.testfx.api.FxToolkit;
 import org.testfx.framework.junit.ApplicationTest;
 
 import static org.testfx.api.FxAssert.verifyThat;
-
+// HA06: 10/10
 public class DrawTests extends ApplicationTest {
 
 
