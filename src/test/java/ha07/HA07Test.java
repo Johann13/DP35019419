@@ -1,10 +1,10 @@
 package ha07;
 
-import ha07.builder.ShopBuilder;
-import ha07.builder.WarehouseBuilder;
 import ha07.model.shop.ShopProduct;
+import ha07.model.warehouse.WarehouseProduct;
 import ha07.server.ShopServer;
 import ha07.server.WarehouseServer;
+import org.junit.Assert;
 import org.junit.Test;
 
 import java.nio.file.Files;
@@ -28,7 +28,6 @@ public class HA07Test {
 		}
 
 		ShopServer.main(null);
-		Thread.sleep(1000);
 		WarehouseServer.main(null);
 
 
@@ -36,15 +35,19 @@ public class HA07Test {
 
 		WarehouseServer.builder.addLotToStock("lotId1", "Shoe 42, size 8", 50);
 
-		Thread.sleep(1000);
+		Thread.sleep(100);
 		WarehouseServer.builder.addLotToStock("lotId2", "Shoe 42, size 8", 50);
 
-		Thread.sleep(1000);
+		Thread.sleep(100);
 		WarehouseServer.builder.addLotToStock("lotId3", "Shoe 42, size 9", 50);
 
 		Thread.sleep(1000);
 
-		ArrayList<ShopProduct> products = ShopServer.builder.shop.getProducts();
+		ArrayList<WarehouseProduct> warehouseProducts = WarehouseServer.builder.warehouse.getProducts();
+
+		Assert.assertEquals(2,warehouseProducts.size());
+
+		ArrayList<ShopProduct> shopProducts = ShopServer.builder.shop.getProducts();
 
 		//products.forEach((p) -> System.out.println(p.getName()));
 
