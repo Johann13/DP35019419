@@ -4,7 +4,7 @@ import java.beans.PropertyChangeSupport;
 
 import java.beans.PropertyChangeListener;
 
-public class ShopProduct 
+public class ShopProduct  
 {
 
    public static final String PROPERTY_name = "name";
@@ -44,27 +44,6 @@ public class ShopProduct
          String oldValue = this.id;
          this.id = value;
          firePropertyChange("id", oldValue, value);
-      }
-      return this;
-   }
-
-
-   public static final String PROPERTY_inStock = "inStock";
-
-   private int inStock;
-
-   public int getInStock()
-   {
-      return inStock;
-   }
-
-   public ShopProduct setInStock(int value)
-   {
-      if (value != this.inStock)
-      {
-         int oldValue = this.inStock;
-         this.inStock = value;
-         firePropertyChange("inStock", oldValue, value);
       }
       return this;
    }
@@ -250,6 +229,37 @@ public class ShopProduct
       return true;
    }
 
+   public void removeYou()
+   {
+      this.setShop(null);
+
+      this.withoutOrders(this.getOrders().clone());
+
+
+   }
+
+
+   public static final String PROPERTY_inStock = "inStock";
+
+   private double inStock;
+
+   public double getInStock()
+   {
+      return inStock;
+   }
+
+   public ShopProduct setInStock(double value)
+   {
+      if (value != this.inStock)
+      {
+         double oldValue = this.inStock;
+         this.inStock = value;
+         firePropertyChange("inStock", oldValue, value);
+      }
+      return this;
+   }
+
+
    @Override
    public String toString()
    {
@@ -261,15 +271,5 @@ public class ShopProduct
 
       return result.substring(1);
    }
-
-   public void removeYou()
-   {
-      this.setShop(null);
-
-      this.withoutOrders(this.getOrders().clone());
-
-
-   }
-
 
 }

@@ -165,7 +165,7 @@
   modified: 	false
   name: 	lotSize
   propertyStyle: 	POJO
-  type: 	int
+  type: 	double
 
 - warehouseProduct21: 	AssocRole
   aggregation: 	false
@@ -199,14 +199,14 @@
   modified: 	false
   name: 	column
   propertyStyle: 	POJO
-  type: 	int
+  type: 	double
 
 - row25: 	Attribute
   clazz: 	palettePlace6
   modified: 	false
   name: 	row
   propertyStyle: 	POJO
-  type: 	int
+  type: 	double
 
 - warehouse26: 	AssocRole
   aggregation: 	false

@@ -4,7 +4,7 @@ import java.beans.PropertyChangeSupport;
 
 import java.beans.PropertyChangeListener;
 
-public class Shop 
+public class Shop  
 {
 
    public static final java.util.ArrayList<ShopCustomer> EMPTY_customers = new java.util.ArrayList<ShopCustomer>()
@@ -305,6 +305,10 @@ public class Shop
 
 
    }
+
+
+
+
 
 
 }

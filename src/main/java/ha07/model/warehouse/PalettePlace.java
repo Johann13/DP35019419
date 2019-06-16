@@ -30,18 +30,18 @@ public class PalettePlace
 
    public static final String PROPERTY_column = "column";
 
-   private int column;
+   private double column;
 
-   public int getColumn()
+   public double getColumn()
    {
       return column;
    }
 
-   public PalettePlace setColumn(int value)
+   public PalettePlace setColumn(double value)
    {
       if (value != this.column)
       {
-         int oldValue = this.column;
+         double oldValue = this.column;
          this.column = value;
          firePropertyChange("column", oldValue, value);
       }
@@ -51,18 +51,18 @@ public class PalettePlace
 
    public static final String PROPERTY_row = "row";
 
-   private int row;
+   private double row;
 
-   public int getRow()
+   public double getRow()
    {
       return row;
    }
 
-   public PalettePlace setRow(int value)
+   public PalettePlace setRow(double value)
    {
       if (value != this.row)
       {
-         int oldValue = this.row;
+         double oldValue = this.row;
          this.row = value;
          firePropertyChange("row", oldValue, value);
       }

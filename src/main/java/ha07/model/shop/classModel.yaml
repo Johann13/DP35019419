@@ -120,7 +120,7 @@
   modified: 	false
   name: 	inStock
   propertyStyle: 	POJO
-  type: 	int
+  type: 	double
 
 - price16: 	Attribute
   clazz: 	shopProduct4

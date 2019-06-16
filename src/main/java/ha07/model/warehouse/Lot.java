@@ -30,18 +30,18 @@ public class Lot
 
    public static final String PROPERTY_lotSize = "lotSize";
 
-   private int lotSize;
+   private double lotSize;
 
-   public int getLotSize()
+   public double getLotSize()
    {
       return lotSize;
    }
 
-   public Lot setLotSize(int value)
+   public Lot setLotSize(double value)
    {
       if (value != this.lotSize)
       {
-         int oldValue = this.lotSize;
+         double oldValue = this.lotSize;
          this.lotSize = value;
          firePropertyChange("lotSize", oldValue, value);
       }

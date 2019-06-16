@@ -15,8 +15,8 @@ public class Gen {
 		ClassBuilder wh = mb.buildClass("Warehouse");
 		ClassBuilder wo = mb.buildClass("WarehouseOrder").buildAttribute("address", ClassModelBuilder.STRING).buildAttribute("id", ClassModelBuilder.STRING);
 		ClassBuilder wp = mb.buildClass("WarehouseProduct").buildAttribute("name", ClassModelBuilder.STRING).buildAttribute("id", ClassModelBuilder.STRING);
-		ClassBuilder lot = mb.buildClass("Lot").buildAttribute("id", ClassModelBuilder.STRING).buildAttribute("lotSize", ClassModelBuilder.INT);
-		ClassBuilder pp = mb.buildClass("PalettePlace").buildAttribute("id", ClassModelBuilder.STRING).buildAttribute("column", ClassModelBuilder.INT).buildAttribute("row", ClassModelBuilder.INT);
+		ClassBuilder lot = mb.buildClass("Lot").buildAttribute("id", ClassModelBuilder.STRING).buildAttribute("lotSize", ClassModelBuilder.DOUBLE);
+		ClassBuilder pp = mb.buildClass("PalettePlace").buildAttribute("id", ClassModelBuilder.STRING).buildAttribute("column", ClassModelBuilder.DOUBLE).buildAttribute("row", ClassModelBuilder.DOUBLE);
 
 		wh.buildAssociation(wo, "orders", ClassModelBuilder.MANY, "warehouse", ClassModelBuilder.ONE);
 		wh.buildAssociation(wp, "products", ClassModelBuilder.MANY, "warehouse", ClassModelBuilder.ONE);
@@ -34,12 +34,12 @@ public class Gen {
 	}
 
 	@Test
-	public void getShop() {
+	public void genShop() {
 		ClassModelBuilder mb = Fulib.classModelBuilder("ha07.model.shop");
 
 		ClassBuilder shop = mb.buildClass("Shop");
 		ClassBuilder sc = mb.buildClass("ShopCustomer").buildAttribute("address", ClassModelBuilder.STRING).buildAttribute("name", ClassModelBuilder.STRING);
-		ClassBuilder sp = mb.buildClass("ShopProduct").buildAttribute("name", ClassModelBuilder.STRING).buildAttribute("id", ClassModelBuilder.STRING).buildAttribute("inStock", ClassModelBuilder.INT).buildAttribute("price", ClassModelBuilder.DOUBLE);
+		ClassBuilder sp = mb.buildClass("ShopProduct").buildAttribute("name", ClassModelBuilder.STRING).buildAttribute("id", ClassModelBuilder.STRING).buildAttribute("inStock", ClassModelBuilder.DOUBLE).buildAttribute("price", ClassModelBuilder.DOUBLE);
 		ClassBuilder so = mb.buildClass("ShopOrder").buildAttribute("id", ClassModelBuilder.STRING);
 
 		shop.buildAssociation(sc, "customers", ClassModelBuilder.MANY, "shop", ClassModelBuilder.ONE);
