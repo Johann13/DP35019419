@@ -11,6 +11,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 
+// HA07: 10/10
 public class HA07Test {
 
 	@Test
