@@ -31,6 +31,7 @@ public class Gen {
 
 		ClassModel model = mb.getClassModel();
 		Fulib.generator().generate(model);
+		Fulib.tablesGenerator().generate(model);
 	}
 
 	@Test
@@ -51,6 +52,7 @@ public class Gen {
 
 		ClassModel model = mb.getClassModel();
 		Fulib.generator().generate(model);
+		Fulib.tablesGenerator().generate(model);
 
 	}
 

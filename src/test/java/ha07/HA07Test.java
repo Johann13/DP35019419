@@ -1,7 +1,13 @@
 package ha07;
 
+import ha07.model.shop.Shop;
 import ha07.model.shop.ShopProduct;
+import ha07.model.shop.tables.ShopTable;
+import ha07.model.warehouse.Warehouse;
 import ha07.model.warehouse.WarehouseProduct;
+import ha07.model.warehouse.tables.LotTable;
+import ha07.model.warehouse.tables.WarehouseProductTable;
+import ha07.model.warehouse.tables.WarehouseTable;
 import ha07.server.ShopServer;
 import ha07.server.WarehouseServer;
 import org.junit.Assert;
@@ -31,7 +37,6 @@ public class HA07Test {
 		ShopServer.main(null);
 		WarehouseServer.main(null);
 
-
 		Thread.sleep(1000);
 
 		WarehouseServer.builder.addLotToStock("lotId1", "Shoe 42, size 8", 50);
@@ -52,11 +57,34 @@ public class HA07Test {
 
 		//products.forEach((p) -> System.out.println(p.getName()));
 
-		Thread.sleep(10000);
+		Thread.sleep(1000);
 		//shopBuilder.addCustomer("Alice 1","Wonderland 1");
 		//shopBuilder.orderProduct("o1","Shoe 42, size 8","Alice 1");
+		//printWarehouseAndShopProducts();
+	}
 
+
+	private void printWarehouseAndShopProducts() {
+		if (WarehouseServer.builder != null) {
+			Warehouse warehouse = WarehouseServer.builder.warehouse;
+			WarehouseTable table = new WarehouseTable(warehouse);
+			WarehouseProductTable productTable = table.expandProducts("Product");
+			LotTable lotTable = productTable.expandLots("Lot");
+			lotTable.expandLotSize("size");
+			lotTable.expandPlaces("Place");
+			table.dropColumns("Warehouse");
+			System.out.println(table);
+		}
+
+		if(ShopServer.builder!=null){
+			Shop shop = ShopServer.builder.shop;
+			ShopTable table = new ShopTable(shop);
+
+		}
 
 	}
+
+
+
 
 }

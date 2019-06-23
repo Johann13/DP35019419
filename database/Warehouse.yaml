@@ -3,19 +3,19 @@
   lotId: lotId1
   product: "Shoe 42, size 8"
   size: 50
-  .eventTimestamp: "2019-06-19T15:56:08.526"
+  .eventTimestamp: "2019-06-23T16:12:01.328"
 
 - eventType: addLotToStock
   .eventKey: lotId2
   lotId: lotId2
   product: "Shoe 42, size 8"
   size: 50
-  .eventTimestamp: "2019-06-19T15:56:08.632"
+  .eventTimestamp: "2019-06-23T16:12:01.451"
 
 - eventType: addLotToStock
   .eventKey: lotId3
   lotId: lotId3
   product: "Shoe 42, size 9"
   size: 50
-  .eventTimestamp: "2019-06-19T15:56:08.734"
+  .eventTimestamp: "2019-06-23T16:12:01.561"
 

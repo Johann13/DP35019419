@@ -1,7 +1,9 @@
 package ha07.proxy;
 
 import ha07.server.ShopServer;
+import org.fulib.yaml.EventFiler;
 import org.fulib.yaml.EventSource;
+import org.fulib.yaml.Yamler;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
@@ -11,6 +13,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLConnection;
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
@@ -24,7 +27,25 @@ public class ShopProxy {
 	public static final String ADD_PRODUCT_TO_SHOP = "addProductToShop";
 	public static final String PRODUCT = "product";
 	public static final String NUMBER_OF_ITEMS = "numberOfItems";
-	private ScheduledExecutorService executor = Executors.newSingleThreadScheduledExecutor();
+	private EventSource eventSource;
+	private ScheduledExecutorService executor;
+
+	public ShopProxy() {
+		eventSource = new EventSource();
+		executor = Executors.newSingleThreadScheduledExecutor();
+
+		EventFiler eventFiler = new EventFiler(eventSource).setHistoryFileName("database/ShopProxy.yaml");
+
+		String yaml = eventFiler.loadHistory();
+		if (yaml != null) {
+			ArrayList<LinkedHashMap<String, String>> eventList = new Yamler().decodeList(yaml);
+			eventSource.append(yaml);
+		}
+
+		eventFiler.storeHistory();
+		eventFiler.startEventLogging();
+
+	}
 
 	public void addProductToShop(String lotId, String productName, int size) {
 		LinkedHashMap<String, String> event = new LinkedHashMap<>();
@@ -32,17 +53,22 @@ public class ShopProxy {
 		event.put(EVENT_KEY, lotId);
 		event.put(PRODUCT, productName);
 		event.put(NUMBER_OF_ITEMS, "" + size);
-		String yaml = EventSource.encodeYaml(event);
-		sendRequest(yaml);
+
+		eventSource.append(event);
+
+		String yaml = "ping: p1";//EventSource.encodeYaml(event);
+		ping(yaml);
 	}
 
-	private void sendRequest(String yaml) {
-		String u = "http://localhost:" + ShopServer.port + "/do";
-		try {
-			System.out.println("ShopProxy sendRequest " + u);
-			System.out.println(yaml);
+	private void ping(String yaml) {
+		sendRequest("ping", yaml);
+	}
 
-			URL url = new URL(u);
+	private void sendRequest(String context, String yaml) {
+		try {
+			System.out.println("ShopProxy sendRequest " + context);
+
+			URL url = new URL(ShopServer.SHOP_URL + "/" + context);
 
 			URLConnection con = url.openConnection();
 			HttpURLConnection http = (HttpURLConnection) con;
@@ -67,7 +93,10 @@ public class ShopProxy {
 			bufferedReader.close();
 			System.out.println(line);
 		} catch (Exception e) {
-			executor.schedule(() -> sendRequest(yaml), 60, TimeUnit.SECONDS);
+			e.printStackTrace();
+			executor.schedule(() -> sendRequest(context, yaml), 60, TimeUnit.SECONDS);
 		}
 	}
+
+
 }
