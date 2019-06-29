@@ -8,6 +8,7 @@ version '1.0-SNAPSHOT'
 sourceCompatibility = 1.8
 
 repositories {
+    google()
     mavenCentral()
     maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
 }
@@ -19,8 +20,19 @@ dependencies {
 
     //compile 'org.fulib.fulibYaml:1.0.+'
 
-    compile 'org.slf4j:slf4j-nop:1.7.25'
+    //compile 'org.slf4j:slf4j-nop:1.7.25'
 
     testCompile 'org.fulib:fulib:1.0.+'
     testCompile 'org.fulib:fulibTools:1.0.+'
+}
+
+
+task(runWarehouse, dependsOn: 'classes', type: JavaExec){
+    main = 'ha07.server.WarehouseServer'
+    classpath = sourceSets.main.runtimeClasspath
+}
+
+task(runShop, dependsOn: 'classes', type: JavaExec){
+    main = 'ha07.server.ShopServer'
+    classpath = sourceSets.main.runtimeClasspath
 }
