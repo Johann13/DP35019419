@@ -1,5 +1,6 @@
 package ha06;
 
+/*
 import ha06.commands.base.Command;
 import ha06.model.Drawable;
 import ha06.model.Group;
@@ -200,3 +201,4 @@ public class Store {
 		}
 	}
 }
+*/

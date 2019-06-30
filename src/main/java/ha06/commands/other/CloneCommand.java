@@ -1,5 +1,6 @@
 package ha06.commands.other;
 
+/*
 import ha06.Store;
 import ha06.commands.base.Command;
 import ha06.model.Drawable;
@@ -52,3 +53,4 @@ public class CloneCommand extends Command {
 		return "clone";
 	}
 }
+*/

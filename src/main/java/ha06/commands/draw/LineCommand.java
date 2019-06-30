@@ -1,5 +1,6 @@
 package ha06.commands.draw;
 
+/*
 import ha06.Store;
 import ha06.commands.base.Command;
 import ha06.model.Line;
@@ -53,3 +54,4 @@ public class LineCommand extends Command {
 		return "line";
 	}
 }
+*/

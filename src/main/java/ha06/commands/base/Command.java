@@ -1,5 +1,6 @@
 package ha06.commands.base;
 
+/*
 import ha06.Store;
 
 public abstract class Command {
@@ -28,3 +29,4 @@ public abstract class Command {
 
 	public abstract String command();
 }
+*/

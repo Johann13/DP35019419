@@ -1,4 +1,4 @@
-package ha06;
+/*package ha06;
 
 import ha06.commands.draw.GroupCommand;
 import ha06.commands.draw.LineCommand;
@@ -67,9 +67,7 @@ public class Controller implements Initializable {
 		AnimationTimer timer = new AnimationTimer() {
 			@Override
 			public void handle(long now) {
-				/*if (now - lastDraw < 1_000_000_000) {
-					return;
-				}*/
+
 				lastDraw = now;
 				//GraphicsContext gc = canvas.getGraphicsContext2D();
 				//gc.setFill(Color.CORNSILK);
@@ -85,3 +83,4 @@ public class Controller implements Initializable {
 		return store;
 	}
 }
+*/

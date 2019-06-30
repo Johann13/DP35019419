@@ -1,5 +1,6 @@
 package ha06.model;
 
+/*
 import javafx.scene.canvas.GraphicsContext;
 
 public abstract class Drawable implements Cloneable {
@@ -24,3 +25,4 @@ public abstract class Drawable implements Cloneable {
 
 	public abstract void move(int x, int y);
 }
+*/

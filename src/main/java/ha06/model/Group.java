@@ -1,5 +1,5 @@
 package ha06.model;
-
+/*
 import javafx.scene.canvas.GraphicsContext;
 
 import java.util.ArrayList;
@@ -90,3 +90,4 @@ public class Group extends Drawable {
 		return "Group: " + getId() + " children: " + children.size();
 	}
 }
+*/

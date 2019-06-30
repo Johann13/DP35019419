@@ -1,5 +1,6 @@
 package ha06;
 
+/*
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.MouseButton;
@@ -68,3 +69,4 @@ public class DrawTests extends ApplicationTest {
 
 
 }
+*/

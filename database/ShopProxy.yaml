@@ -2,24 +2,6 @@
   .eventKey: lotId1
   product: "Shoe 42, size 8"
   numberOfItems: 50
-  .eventTimestamp: "2019-06-23T15:47:47.390"
-
-- eventType: addProductToShop
-  .eventKey: lotId2
-  product: "Shoe 42, size 8"
-  numberOfItems: 50
-  .eventTimestamp: "2019-06-23T15:47:47.544"
-
-- eventType: addProductToShop
-  .eventKey: lotId3
-  product: "Shoe 42, size 9"
-  numberOfItems: 50
-  .eventTimestamp: "2019-06-23T15:47:47.696"
-
-- eventType: addProductToShop
-  .eventKey: lotId1
-  product: "Shoe 42, size 8"
-  numberOfItems: 50
   .eventTimestamp: "2019-06-23T16:12:01.334"
 
 - eventType: addProductToShop
@@ -33,4 +15,22 @@
   product: "Shoe 42, size 9"
   numberOfItems: 50
   .eventTimestamp: "2019-06-23T16:12:01.570"
+
+- eventType: addProductToShop
+  .eventKey: lotId1
+  product: "Shoe 42, size 8"
+  numberOfItems: 50
+  .eventTimestamp: "2019-06-30T10:55:34.594"
+
+- eventType: addProductToShop
+  .eventKey: lotId2
+  product: "Shoe 42, size 8"
+  numberOfItems: 50
+  .eventTimestamp: "2019-06-30T10:55:34.623"
+
+- eventType: addProductToShop
+  .eventKey: lotId3
+  product: "Shoe 42, size 9"
+  numberOfItems: 50
+  .eventTimestamp: "2019-06-30T10:55:34.630"
 

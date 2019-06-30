@@ -1,5 +1,6 @@
 package ha06.commands.other;
 
+/*
 import ha06.Store;
 import ha06.commands.base.Command;
 
@@ -20,3 +21,4 @@ public class ClearCommand extends Command {
 		return "clear";
 	}
 }
+*/

@@ -1,5 +1,6 @@
 package ha06.commands.unredo;
 
+/*
 import ha06.Store;
 import ha06.commands.base.Command;
 
@@ -12,11 +13,6 @@ public class RedoCommand extends Command {
 
 			int index = Integer.parseInt(array[1]);
 			System.out.println("redo index "+index);
-
-			/*
-			if (array[0].equals("undo")) {
-				return process("undo " + (index + 1), store);
-			}*/
 
 			//String lastCommand = store.getLastCommand(index);
 			store.redoCommand(index);
@@ -36,3 +32,4 @@ public class RedoCommand extends Command {
 		return "redo";
 	}
 }
+*/

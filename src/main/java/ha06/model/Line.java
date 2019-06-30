@@ -1,5 +1,6 @@
 package ha06.model;
 
+/*
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
@@ -71,3 +72,4 @@ public class Line extends Drawable {
 		return "line: " + getId() + ", " + start + ", " + end;
 	}
 }
+*/
