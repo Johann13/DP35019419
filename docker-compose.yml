@@ -1,0 +1,9 @@
+shop:
+  build: docker/shop/
+  ports:
+    - "8081:8081"
+
+warehouse:
+  build: docker/warehouse/
+  ports:
+    - "9092:9092"
