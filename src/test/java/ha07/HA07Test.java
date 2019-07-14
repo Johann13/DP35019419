@@ -18,6 +18,9 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 
 // HA07: 10/10
+// HA08: 0/10 ==> kein test
+// HA09: 10/10 ==>
+// HA10: 5/10 ==> kein volume
 public class HA07Test {
 
 	@Test
